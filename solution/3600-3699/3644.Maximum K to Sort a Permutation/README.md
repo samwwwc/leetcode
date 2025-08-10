@@ -95,6 +95,17 @@ edit_url: https://github.com/doocs/leetcode/edit/main/solution/3600-3699/3644.Ma
 #### C++
 
 ```cpp
+class Solution {
+public:
+    int sortPermutation(vector<int>& nums) {
+       if(is_sorted(nums.begin(),nums.end())) return 0;
+        int ans=0x7fffffff;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]!=i) ans&=i;
+        }
+        return ans;
+    }
+};
 
 ```
 
